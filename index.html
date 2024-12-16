@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <title>Electronics Warehouse</title>
+    
+    <style>
+	 #notice-messag {
+            background-color: #fff3cd; /* Blond/light yellow background */
+            color: #856404; /* Dark gold text */
+            padding: 15px;
+            border: 1px solid #ffeeba; /* Soft yellow border */
+            border-radius: 5px; /* Rounded corners */
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            display: none; /* Hidden by default */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+	 #notice-messages {
+            background-color: #fff3cd; /* Blond/light yellow background */
+            color: #856404; /* Dark gold text */
+            padding: 15px;
+            border: 1px solid #ffeeba; /* Soft yellow border */
+            border-radius: 5px; /* Rounded corners */
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            display: none; /* Hidden by default */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+	body > form {
+    flex: 1; /* Allows the main content to grow, pushes the footer down */
+    padding: 40px; /* Add some space inside the forms */
+    overflow-y: auto; /* Enable scrolling for overflowing forms */
+}
+
+	/* Body Layout for Footer Positioning */
+/* Ensure body and html take up the full height */
+html, body {
+    height: auto; /* Allow the body to expand based on content */
+    min-height: 100%; /* Ensure it fills the viewport if content is small */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    display: flex;
+    flex-direction: column; /* Stack content and footer vertically */
+}
+/* Main content area flex settings */
+body > form {
+    flex: 1; /* Allows forms/content to grow and pushes footer down */
+}
+
+/* Footer Styling */
+footer {
+    width: 100%; /* Full width */
+    background: linear-gradient(135deg, #66a6ff, #89f7fe);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 2px solid #ddd;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+        /* Gradient background */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #f7b42c, #fc575e, #66a6ff, #f7f8f8);
+            background-size: 300% 300%;
+            animation: gradientBackground 8s infinite alternate;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 50% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        form {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+            background-size: 300% 300%;
+            animation: gradientForm 6s infinite alternate;
+            border: 2px solid #ddd;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 450px;
+            display: none; /* All forms hidden initially */
+        }
+
+        form.active {
+            display: block; /* Only active form is displayed */
+        }
+
+        h1, h3 {
+            text-align: center;
+            color: black;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: black;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+input[type="text"], textarea, select, button {
+    width: 100%; /* Full width for better alignment */
+    margin-top: 5px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+        button {
+            background: linear-gradient(135deg, #66a6ff, #89f7fe);
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+            padding: 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .additional-info {
+            display: none;
+            margin-top: 10px;
+            color: black;
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Step 1: Choose iPhone -->
+    <!-- Step 1: Choose iPhone -->
+<!-- Step 1: Choose iPhone -->
+<form id="form-step-1" class="active">
+    <h1>Welcome to Electronics(iphones) Wearhouse</h1>
+    <h3>Select a model:</h3>
+    <label><input type="radio" name="phone_model" value="iPhone 6s" required> iPhone 6s - R1,200</label>
+    <label><input type="radio" name="phone_model" value="iPhone 8 Plus"> iPhone 8 Plus - R1,800</label>
+    <label><input type="radio" name="phone_model" value="iPhone XR"> iPhone XR - R2,000</label>
+	<label><input type="radio" name="phone_model" value="iPhone XS MAX" required> iPhone XR MAX - R2,500</label>
+    <label><input type="radio" name="phone_model" value="iPhone 8 Plus"> iPhone 11 - R3,500</label>
+    <label><input type="radio" name="phone_model" value="iPhone XR"> iPhone 11 Pro - R4,000</label>
+	<label><input type="radio" name="phone_model" value="iPhone 6s" required> iPhone 12 - R4,300</label>
+    <label><input type="radio" name="phone_model" value="iPhone 8 Plus"> iPhone 12 pro - R4,500</label>
+    <label><input type="radio" name="phone_model" value="iPhone XR"> iPhone 13 Mini - R5,000</label>
+	<label><input type="radio" name="phone_model" value="iPhone 6s" required> iPhone 13 pro max - R7,000</label>
+    <label><input type="radio" name="phone_model" value="iPhone 8 Plus"> iPhone 14 - R8,000</label>
+    <label><input type="radio" name="phone_model" value="iPhone XR"> iPhone 14 pro max- R10,000</label>
+	<label><input type="radio" name="phone_model" value="iPhone 6s" required> iPhone 15 pro max- R12,000</label>
+    
+<div id="notice-message" style="
+    background: #ffecb3;
+    padding: 15px;
+    border-left: 5px solid #ffa000;
+    color: #6d4c41;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    display: none;">
+</div>
+    <h3>Select a color:</h3>
+    <label>
+        <select name="color" required>
+            <option value="" disabled selected>Select a color</option>
+            <option value="Black">Black</option>
+            <option value="White">White</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Gold">Gold</option>
+        </select>
+    </label>
+    
+  <button type="button" onclick="showCourierOptions()">View Courier</button>
+    <button type="button" onclick="showPictures()">View Pictures</button>
+    <button type="button" onclick="showNextForm(2)">Next</button>
+</form>
+
+<!-- Courier Info Section -->
+<!-- Courier Info Section -->
+<!-- Courier Info Section -->
+<div id="courier-info" style="display: none; margin-top: 20px;">
+    <h2>Available Couriers</h2>
+
+    <!-- PAXI -->
+    <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+        <h3><a href="https://www.paxi.co.za" target="_blank" style="color: #007bff; text-decoration: none;">PAXI</a></h3>
+        <p>
+            PAXI is a reliable courier service that focuses on affordability and convenience, making it an excellent choice for budget-conscious users. 
+            It offers parcel delivery to and from over 3,000 collection points across South Africa, ensuring easy accessibility no matter where you are located. 
+            Customers can choose between various service options, including 3-5 day and 7-9 day delivery times, which cater to both urgent and non-urgent needs. 
+            One of PAXI's standout features is its user-friendly tracking system, allowing customers to monitor their parcels' progress in real time. 
+            PAXI is ideal for small businesses, individuals, and those who prefer cost-effective delivery without compromising on reliability. Its extensive network and low-cost options make it a go-to solution for nationwide parcel distribution.
+        </p>
+    </div>
+
+    <!-- RAM -->
+    <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+        <h3><a href="https://www.ram.co.za" target="_blank" style="color: #007bff; text-decoration: none;">RAM</a></h3>
+        <p>
+            RAM is a highly trusted courier service known for its secure and efficient delivery solutions. Specializing in door-to-door deliveries, 
+            RAM ensures that your package is collected from your location and delivered directly to the recipient’s doorstep, offering unparalleled convenience. 
+            One of RAM's strengths is its focus on safety, with a track record of handling sensitive and valuable packages like electronics, documents, and personal items with great care. 
+            They provide real-time tracking and proof of delivery, so you’ll always know the status of your shipment. RAM also offers same-day and next-day delivery options, 
+            making it a popular choice for businesses and individuals who require time-sensitive shipping. Additionally, their customer support is widely praised for being responsive and helpful, 
+            ensuring a seamless delivery experience from start to finish.
+        </p>
+    </div>
+
+    <!-- The Courier Guy -->
+    <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+        <h3><a href="https://www.thecourierguy.co.za" target="_blank" style="color: #007bff; text-decoration: none;">The Courier Guy</a></h3>
+        <p>
+            The Courier Guy is a fast-growing delivery service known for its wide range of customizable shipping options, including same-day, overnight, and economy deliveries. 
+            Their services are tailored to meet the needs of both individuals and businesses, making them a versatile choice for all kinds of shipping requirements. 
+            They offer user-friendly online tools for booking and tracking parcels, which simplify the entire process for customers. 
+            A significant advantage of The Courier Guy is its reliability, especially for urgent deliveries, as their same-day service guarantees fast and timely parcel transport within major cities. 
+            They also cater to smaller towns and rural areas, ensuring broad coverage across South Africa. 
+            Their competitive pricing combined with exceptional service quality has made them a trusted name in the courier industry, particularly for customers who value efficiency and reliability.
+        </p>
+    </div>
+
+    <!-- Close Button -->
+    <button type="button" onclick="hideCouriers()">Close</button>
+</div>
+
+<div id="pictures-section" style="display: none; margin-top: 20px;">
+<div style="
+        background: #ffecb3;
+        padding: 15px;
+        border-left: 5px solid #ffa000;
+        color: #6d4c41;
+        font-family: Arial, sans-serif;
+        margin-bottom: 20px;">
+        <p><strong>Notice:</strong> We don’t have pictures on our website yet. Please contact this number on WhatsApp for picture requests: <a href="https://wa.me/0748010527" target="_blank" style="color: #007bff; text-decoration: none;">0748010527</a>.</p>
+    </div>
+    <button type="button" onclick="hidePictures()">Close</button>
+</div>
+<form id="form-step-2">
+    <h1>Enter Your Details</h1>
+	 
+     <div id="notice-messages">⚠️Important Notice: Make sure your details are valid.</div>
+    <label>First Name: <input type="text" name="name" required></label>
+    <label>Surname: <input type="text" name="surname" required></label>
+    <label>Phone Number: <input type="text" name="phone" required></label>
+    <label>Address: <textarea name="address" required></textarea></label>
+	 <label>
+            Gender:
+            <div>
+                <input type="radio" name="gender" value="male" required> Male
+                <input type="radio" name="gender" value="female" required> Female
+            </div>
+        </label>
+		<label>
+           Provice:
+            <select name="country" required>
+                <option value="">Select Privice</option>
+                <option value="usa">Gauteng</option>
+                <option value="uk">Mpumalanga</option>
+                <option value="india">Eastern Cape</option>
+				<option value="india">North West</option>
+				<option value="usa">Western Cape</option>
+                <option value="usa">North West</option>
+                <option value="india">Limpopo</option>
+				<option value="usa">Kwazulu Natal</option>
+                <option value="uk">Free State</option>
+               
+            </select>
+        </label>
+	
+    <button type="button" onclick="showPreviousForm(1)">Back</button>
+    <button type="button" onclick="showNextForm(3)">Next</button>
+</form>
+
+<form id="form-step-3" onsubmit="handlePurchase(event)">
+    <h1>Choose Payment Method</h1>
+    <label>
+        <input type="radio" name="payment_method" value="Cash Send" required onclick="showPaymentInfo('cash-send')"> Cash Send
+    </label>
+    <label>
+        <input type="radio" name="payment_method" value="Pay with Card" required onclick="handleCardError()"> Pay with Card
+    </label>
+    <label>
+        <input type="radio" name="payment_method" value="EFT" required onclick="showPaymentInfo('eft')"> EFT
+    </label>
+
+    <div id="cash-send" class="additional-info">
+        <p>Send the cash to this number: <strong>+27848010527</strong></p>
+    </div>
+
+    <div id="pay-card" class="additional-info">
+        <!-- Card Details Section -->
+        <p style="color: red; font-weight: bold; display: none;" id="card-error">We are currently experiencing issues with card payments. Please select another payment method.</p>
+        <div id="card-details" style="display: none;">
+            <label>Bank Name: <input type="text" name="bank_name" id="bank_name"></label>
+            <label>Card Number: <input type="text" name="card_number" id="card_number"></label>
+            <label>CVC: <input type="text" name="cvc" id="cvc"></label>
+        </div>
+    </div>
+
+    <div id="eft" class="additional-info">
+        <p>Transfer to this account:</p>
+        <ul>
+            <li>Bank Name: Nedbank</li>
+            <li>Account Number: 2075772525</li>
+            <li>Branch Code: 198765</li>
+        </ul>
+    </div>
+
+    <p id="purchase-message" style="display: none; font-weight: bold; color: green;">Thank you for your purchase! Your order has been successfully placed.If you've not made the payments yet...Do it ASAP to avoid Delivery delays...Please contact our Agent to ask for tracking number: 0748010527</p>
+    <button type="submit" id="submit-button">Purchase</button>
+</form>
+
+
+    
+
+    <script>
+function handlePurchase(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const form = document.getElementById('form-step-3');
+    if (!validateCurrentForm(form)) {
+        return; // Prevent submission if validation fails
+    }
+
+    // Show success message if everything is valid
+    const purchaseMessage = document.getElementById('purchase-message');
+    purchaseMessage.style.display = 'block';
+    document.getElementById('submit-button').disabled = true; // Disable the button
+}
+
+function showNextForm(step) {
+    const currentForm = document.querySelector('form.active');
+    const nextForm = document.getElementById(`form-step-${step}`);
+
+    // Validate the current form before moving to the next
+    if (!validateCurrentForm(currentForm)) {
+        return; // If validation fails, stop here
+    }
+
+    // Transition to the next form
+    currentForm.classList.remove('active');
+    nextForm.classList.add('active');
+}
+function handleCardError() {
+    const cardError = document.getElementById('card-error');
+    const payCardSection = document.getElementById('pay-card');
+    const submitButton = document.getElementById('submit-button');
+
+    cardError.style.display = 'block'; // Show the error message
+    payCardSection.style.border = '2px solid red'; // Highlight visually
+    payCardSection.style.padding = '10px';
+    submitButton.disabled = true; // Disable the button
+}
+
+    function validateCurrentForm(form) {
+    let isValid = true;
+    const errorContainer = form.querySelector('.error-message') || document.createElement('div');
+    errorContainer.className = 'error-message';
+    errorContainer.style.color = 'red';
+    errorContainer.style.marginBottom = '15px';
+    errorContainer.innerHTML = ''; // Clear previous errors
+
+    // Step 1 Validation: Phone Model and Color
+    if (form.id === 'form-step-1') {
+        const phoneModel = form.querySelector('input[name="phone_model"]:checked');
+        const color = form.querySelector('select[name="color"]');
+
+        if (!phoneModel) {
+            errorContainer.innerHTML += '<p>Please select a phone model.</p>';
+            isValid = false;
+        }
+        if (!color || color.value === '') {
+            errorContainer.innerHTML += '<p>Please select a color.</p>';
+            isValid = false;
+        }
+    }
+
+    // Step 2 Validation: User Details
+    if (form.id === 'form-step-2') {
+        const name = form.querySelector('input[name="name"]').value.trim();
+        const surname = form.querySelector('input[name="surname"]').value.trim();
+        const phone = form.querySelector('input[name="phone"]').value.trim();
+        const address = form.querySelector('textarea[name="address"]').value.trim();
+
+        if (!name) {
+            errorContainer.innerHTML += '<p>Please enter your first name.</p>';
+            isValid = false;
+        }
+        if (!surname) {
+            errorContainer.innerHTML += '<p>Please enter your surname.</p>';
+            isValid = false;
+        }
+        if (!phone || !/^\d+$/.test(phone)) {
+            errorContainer.innerHTML += '<p>Please enter a valid phone number (numbers only).</p>';
+            isValid = false;
+        }
+        if (!address) {
+            errorContainer.innerHTML += '<p>Please enter your address.</p>';
+            isValid = false;
+        }
+    }
+
+    // Step 3 Validation: Payment Method
+    if (form.id === 'form-step-3') {
+        const paymentMethod = form.querySelector('input[name="payment_method"]:checked');
+
+        if (!paymentMethod) {
+            errorContainer.innerHTML += '<p>Please select a payment method.</p>';
+            isValid = false;
+        }
+
+        // Special case for "Pay with Card"
+        if (paymentMethod && paymentMethod.value === 'Pay with Card') {
+            handleCardError();
+            return false; // Stop further execution for "Pay with Card"
+        }
+    }
+
+    // Insert the error message container at the top if not already there
+    if (!isValid) {
+        if (!form.querySelector('.error-message')) {
+            form.insertBefore(errorContainer, form.firstChild);
+        }
+    }
+
+    return isValid;
+}
+
+    function showPaymentInfo(method) {
+    // Reset button and card error styles when switching payment methods
+    document.getElementById('card-error').style.display = "none"; // Hide card error
+    document.getElementById('pay-card').style.border = "none"; // Reset border
+    document.getElementById('submit-button').disabled = false; // Re-enable the button
+
+    // Hide all additional info sections
+    document.querySelectorAll('.additional-info').forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Show the selected payment method section
+    const selectedSection = document.getElementById(method);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+    }
+}
+
+    function validatePaymentMethod() {
+    const paymentMethod = document.querySelector('input[name="payment_method"]:checked');
+    const errorMessage = document.getElementById('error-message');
+
+    if (!paymentMethod) {
+        errorMessage.textContent = "Please select a payment method.";
+        errorMessage.style.display = "block";
+        return false; // Prevent form submission
+    }
+
+    if (paymentMethod.value === "Pay with Card") {
+        errorMessage.textContent = "We are currently having issues, try again later.";
+        errorMessage.style.display = "block";
+        return false; // Prevent form submission
+    }
+
+    errorMessage.style.display = "none"; // Hide error if other methods are selected
+    return true; // Allow form submission
+}
+function showPreviousForm(step) {
+    const currentForm = document.querySelector('form.active');
+    const previousForm = document.getElementById(`form-step-${step}`);
+
+    // Show the previous form
+    currentForm.classList.remove('active');
+    previousForm.classList.add('active');
+}
+function showCourierOptions() {
+    const courierSection = document.getElementById('courier-info');
+    courierSection.style.display = 'block'; // Show the courier section
+}
+
+function hideCouriers() {
+    const courierSection = document.getElementById('courier-info');
+    courierSection.style.display = 'none'; // Hide the courier section
+}
+
+function showPictures() {
+    const picturesSection = document.getElementById('pictures-section');
+    picturesSection.style.display = 'block'; // Show the pictures section
+}
+
+function hidePictures() {
+    const picturesSection = document.getElementById('pictures-section');
+    picturesSection.style.display = 'none'; // Hide the pictures section
+}
+function displayNotice() {
+    const noticeMessage = document.getElementById('notice-message');
+    noticeMessage.innerHTML = "Important Notice: The listed prices are for 64GB and 128GB storage options. If you choose the 512GB storage option, an additional R150 will be added to the price.";
+    noticeMessage.style.display = 'block'; // Make the notice visible
+}
+
+// Call the function as soon as the page loads
+window.onload = displayNotice;
+   // Display the notice message when the form is loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            const notice = document.getElementById('notice-messages');
+            notice.style.display = 'block'; // Show the message
+        });
+
+    </script>
+	<footer style="background: linear-gradient(135deg, #141E30, #243B55); color: white; padding: 40px; text-align: center; font-family: Arial, sans-serif;">
+    <!-- Store Name and Copyright -->
+    <div style="margin-bottom: 20px;">
+        <h2 style="margin: 0; font-size: 24px; color: #f1c40f;">Electronics Warehouse</h2>
+        <p style="margin: 5px 0;">&copy; 2024 Electronics Warehouse. All Rights Reserved.</p>
+    </div>
+
+    <!-- Social Media Links -->
+    <div style="margin-bottom: 30px;">
+        <h3 style="margin-bottom: 10px; font-size: 18px; color: #3498db;">Follow Us</h3>
+        <a href="#" style="margin: 0 10px; color: #3498db; text-decoration: none; font-size: 16px;">Facebook</a> |
+        <a href="#" style="margin: 0 10px; color: #1da1f2; text-decoration: none; font-size: 16px;">Twitter</a> |
+        <a href="#" style="margin: 0 10px; color: #e4405f; text-decoration: none; font-size: 16px;">Instagram</a> |
+       
+    </div>
+
+    <!-- Contact Information -->
+    <div style="margin-bottom: 30px;">
+        <h3 style="margin-bottom: 10px; font-size: 18px; color: #2ecc71;">Contact Us</h3>
+        <p style="margin: 5px 0;">📞 Phone: +27748010527</p>
+        <p style="margin: 5px 0;">📧 Email: <a href="mailto:support@electronicswarehouse.com" style="color: #2ecc71; text-decoration: none;">support@electronicswarehouse.com</a></p>
+        <p style="margin: 5px 0;">📍 Address: EL Oxford st, JHB CBD</p>
+    </div>
+
+    <!-- Terms and Conditions -->
+    <div style="margin-top: 30px;">
+        <h3 style="margin-bottom: 10px; font-size: 18px; color: #e74c3c;">Terms and Conditions</h3>
+        <p style="font-size: 14px; margin: 0 20px; line-height: 1.6; color: #bdc3c7;">
+            By using this website and purchasing products, you agree to our 
+            <a href="#" style="color: #e74c3c; text-decoration: none;">Terms and Conditions</a>. 
+            All products are subject to availability and may vary slightly from their description. 
+            Shipping times and fees are subject to change based on the chosen courier. 
+            Refunds and returns are processed in accordance with our store policies. 
+            For more information, please read our <a href="#" style="color: #e74c3c; text-decoration: none;">Privacy Policy</a> and <a href="#" style="color: #e74c3c; text-decoration: none;">Refund Policy</a>.
+        </p>
+    </div>
+
+    <!-- Bottom Line -->
+    <div style="margin-top: 20px; border-top: 1px solid #34495e; padding-top: 10px;">
+        <p style="font-size: 14px; color: #95a5a6;">Powered by Electronics Warehouse. Built with love for Apple fans. ❤️</p>
+    </div>
+</footer>
+
+
+</body>
+</html>
